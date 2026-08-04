@@ -37,10 +37,10 @@ export default function InstitutionalLandingPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-blue-400 font-semibold tracking-wider uppercase text-sm mb-4">The Human Anchor™</h2>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Evidence-Informed Wellness Programming for Older Adults
+            Evidence-Informed Healthy Aging Programs for Community Organizations
           </h1>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Helping Senior Centers build healthier, happier, and more connected communities.
+            Helping Senior Centers, Libraries, and Community Organizations build healthier, happier, and more connected communities.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-10 text-sm font-medium">
             <span className="bg-slate-800 px-4 py-2 rounded-full">Chair Qigong</span>
@@ -49,7 +49,7 @@ export default function InstitutionalLandingPage() {
             <span className="bg-slate-800 px-4 py-2 rounded-full">Healthy Aging Education</span>
           </div>
           <a href="#demo-form" className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
-            Schedule a Free Demo
+            Schedule a Complimentary Demonstration
           </a>
         </div>
       </header>
@@ -60,15 +60,15 @@ export default function InstitutionalLandingPage() {
           <h2 className="text-3xl font-bold mb-6 text-center text-slate-800">
             Your Monthly Activity Calendar Shouldn't Be Difficult to Fill
           </h2>
-          <div className="prose prose-lg mx-auto text-slate-600">
+          <div className="prose prose-lg mx-auto text-slate-600 space-y-4">
             <p>
-              Keeping older adults engaged takes more than bingo and exercise classes. Today’s seniors are looking for programs that improve balance, reduce stress, encourage social connection, and support healthy aging.
+              Keeping older adults engaged takes more than bingo and basic exercise classes. Today’s seniors are looking for programs that improve balance, reduce stress, encourage social connection, and support healthy aging.
             </p>
             <p>
               <strong>The Human Anchor™ Healthy Aging Program</strong> combines gentle chair-based Qigong, guided breathing, mindfulness, and evidence-informed wellness education into an engaging experience that participants look forward to each week.
             </p>
             <p className="italic border-l-4 border-blue-500 pl-4 mt-6">
-              Designed specifically for senior centers, libraries, community organizations, and adult day programs throughout New York City and Westchester.
+              Designed specifically for senior centers, libraries, community organizations, adult day programs, and wellness initiatives throughout New York City, the Bronx, Mount Vernon, and Westchester.
             </p>
           </div>
         </div>
@@ -80,22 +80,42 @@ export default function InstitutionalLandingPage() {
           <h2 className="text-3xl font-bold mb-12 text-center text-slate-800">
             Programs Built for Your Activity Calendar
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
               <h3 className="text-xl font-bold mb-3 text-slate-900">Chair Qigong & Gentle Mobility</h3>
               <p className="text-slate-600">Safe, gentle movement adaptable for all physical abilities. Fully clothed, no floor work required.</p>
             </div>
             <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
-              <h3 className="text-xl font-bold mb-3 text-slate-900">Better Balance Support</h3>
-              <p className="text-slate-600">Enhancing body awareness, coordination, and movement confidence to support fall prevention.</p>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">Better Balance & Fall Prevention Support</h3>
+              <p className="text-slate-600">Enhancing body awareness, coordination, and movement confidence to support ongoing mobility.</p>
             </div>
             <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
-              <h3 className="text-xl font-bold mb-3 text-slate-900">Guided Breathing</h3>
-              <p className="text-slate-600">Practical techniques for everyday relaxation, nervous system regulation, and stress management.</p>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">Guided Breathing & Stress Reduction</h3>
+              <p className="text-slate-600">Practical techniques for everyday relaxation, nervous system regulation, and mental clarity.</p>
             </div>
             <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
               <h3 className="text-xl font-bold mb-3 text-slate-900">Healthy Aging Education</h3>
-              <p className="text-slate-600">Science-backed guidance for lifelong vitality, memory support, and better sleep hygiene.</p>
+              <p className="text-slate-600">Science-backed guidance for lifelong vitality, joint health, memory support, and restful sleep.</p>
+            </div>
+          </div>
+
+          {/* Delivery Formats */}
+          <h3 className="text-2xl font-bold mb-8 text-center text-slate-800">Flexible Delivery Options</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-6 border border-blue-200 bg-blue-50/50 rounded-xl text-center">
+              <h4 className="font-bold text-slate-900 mb-2">Complimentary Demo</h4>
+              <p className="text-sm text-slate-600">45 Minutes • No Obligation</p>
+              <p className="text-xs text-slate-500 mt-2">Designed for staff and participants to experience the program firsthand.</p>
+            </div>
+            <div className="p-6 border border-slate-200 rounded-xl text-center">
+              <h4 className="font-bold text-slate-900 mb-2">Recurring Weekly Program</h4>
+              <p className="text-sm text-slate-600">60 Minutes • Weekly / Biweekly</p>
+              <p className="text-xs text-slate-500 mt-2">Consistent ongoing programming tailored to your monthly schedule.</p>
+            </div>
+            <div className="p-6 border border-slate-200 rounded-xl text-center">
+              <h4 className="font-bold text-slate-900 mb-2">Healthy Aging Workshop Series</h4>
+              <p className="text-sm text-slate-600">8 Weeks • Focused Curriculum</p>
+              <p className="text-xs text-slate-500 mt-2">Structured educational modules on balance, breath, and vitality.</p>
             </div>
           </div>
         </div>
@@ -179,13 +199,13 @@ export default function InstitutionalLandingPage() {
                 disabled={isSubmitting}
                 className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-lg transition-colors disabled:opacity-50"
               >
-                {isSubmitting ? 'Sending Request...' : 'Request Free Demo Class'}
+                {isSubmitting ? 'Sending Request...' : 'Schedule a Complimentary Demonstration'}
               </button>
             </form>
           )}
         </div>
       </section>
-
+      
       {/* Footer */}
       <footer className="text-center py-8 text-slate-500 text-sm border-t border-slate-200">
         <p>© {new Date().getFullYear()} The Human Anchor™. All rights reserved.</p>
