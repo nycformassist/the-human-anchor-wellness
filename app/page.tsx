@@ -1,3 +1,20 @@
+{/* Top Navigation Bar */}
+      <nav className="bg-slate-950 text-slate-300 py-3 px-6 border-b border-slate-800 text-sm">
+        <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4">
+          <div className="font-semibold text-white tracking-wide">The Human Anchor™</div>
+          <div className="flex items-center gap-2 bg-slate-900 p-1 rounded-lg border border-slate-800">
+            <span className="px-3 py-1.5 rounded-md text-xs font-medium bg-blue-600 text-white shadow-sm">
+              For Organizations & Facilities
+            </span>
+            <Link 
+              href="/individual" 
+              className="px-3 py-1.5 rounded-md text-xs font-medium text-slate-400 hover:text-white transition-colors"
+            >
+              For Individuals
+            </Link>
+          </div>
+        </div>
+      </nav>
 'use client';
 
 import { useState } from 'react';
