@@ -11,13 +11,20 @@ export default function MasterHomepage() {
     setIsSubmitting(true);
     
     const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData);
+    const name = formData.get('name');
+    const organization = formData.get('organization');
+    const role = formData.get('role');
+    const orgType = formData.get('orgType');
+    const email = formData.get('email');
+    const phone = formData.get('phone');
+    const notes = formData.get('notes');
+    const interests = formData.getAll('interests');
 
     try {
       const response = await fetch('/api/send-demo-request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ name, organization, role, orgType, email, phone, interests, notes }),
       });
 
       if (response.ok) {
@@ -306,6 +313,52 @@ export default function MasterHomepage() {
               <h4 className="font-bold text-[#1A362B] mb-2 text-lg">Custom & Workshops</h4>
               <p className="text-sm text-[#B87333] font-semibold mb-3">6-8 Weeks or Single Event</p>
               <p className="text-sm text-slate-600">Structured series and customized programming for healthcare, corporate, and non-profits.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 14. FAQ SECTION */}
+      <section id="faq" className="py-20 px-6 bg-white border-t border-stone-200">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-serif font-bold mb-10 text-center text-[#1A362B]">
+            Frequently Asked Questions
+          </h2>
+          
+          <div className="space-y-6">
+            <div className="pb-6 border-b border-stone-100">
+              <h4 className="font-bold text-[#1A362B] mb-2 text-lg">Who are The Human Anchor™ programs designed for?</h4>
+              <p className="text-slate-600 leading-relaxed">Programs are designed for senior centers, older adult programs, libraries, assisted living communities, adult day programs, caregiver organizations, nonprofits, healthcare initiatives, workplaces, and community groups.</p>
+            </div>
+
+            <div className="pb-6 border-b border-stone-100">
+              <h4 className="font-bold text-[#1A362B] mb-2 text-lg">Do participants need previous Qigong or meditation experience?</h4>
+              <p className="text-slate-600 leading-relaxed">No. Programs are designed to be accessible to beginners and can be adapted to different experience levels.</p>
+            </div>
+
+            <div className="pb-6 border-b border-stone-100">
+              <h4 className="font-bold text-[#1A362B] mb-2 text-lg">Do you offer both chair-based and standing Qigong?</h4>
+              <p className="text-slate-600 leading-relaxed">Yes. The Human Anchor™ integrates both chair-based and standing Qigong practices. Programs are adapted based on the needs, comfort, mobility levels, and goals of participants.</p>
+            </div>
+
+            <div className="pb-6 border-b border-stone-100">
+              <h4 className="font-bold text-[#1A362B] mb-2 text-lg">Can sessions be conducted entirely while seated?</h4>
+              <p className="text-slate-600 leading-relaxed">Yes. Chair-based programming is available and can be adapted for participants who prefer or require seated movement.</p>
+            </div>
+
+            <div className="pb-6 border-b border-stone-100">
+              <h4 className="font-bold text-[#1A362B] mb-2 text-lg">What does a typical session include?</h4>
+              <p className="text-slate-600 leading-relaxed">Depending on the program, sessions may include wellness education, Qigong-inspired movement, guided breathing, meditation, mindfulness, relaxation, and practical take-home strategies.</p>
+            </div>
+
+            <div className="pb-6 border-b border-stone-100">
+              <h4 className="font-bold text-[#1A362B] mb-2 text-lg">Do you provide programs throughout New York City?</h4>
+              <p className="text-slate-600 leading-relaxed">Yes. The Human Anchor™ currently focuses on the Bronx, Mount Vernon, Westchester, Manhattan, and greater New York City.</p>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-[#1A362B] mb-2 text-lg">Is this medical treatment or therapy?</h4>
+              <p className="text-slate-600 leading-relaxed">No. The Human Anchor™ provides wellness education, meditation instruction, Qigong-based movement, mindfulness, breathwork, and stress-management education. Programs are not medical treatment, psychotherapy, physical therapy, or a substitute for professional healthcare.</p>
             </div>
           </div>
         </div>
